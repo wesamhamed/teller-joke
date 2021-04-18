@@ -14,5 +14,59 @@ html {
 
 body {
     margin: 0;
-    min-height: 100vh;
+    background-color: #45badd;
+    font-size: 1.6rem;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./robot.gif');
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    width: 20rem;
+    height: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #ff3482;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 2rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    filter: brightness(95%);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    cursor: default;
+    filter: brightness(30%)
+}
+
+
+/* Media Screen:Tablet or Smaller screen */
+
+@media screen and (max-width:1000) {
+    .container {
+        background-position: cover;
+        background-position: center center;
+    }
+    button {
+        box-shadow: 0.5rem 0.5rem 3rem 2rem rgba(0, 0, 0, 0.5);
+    }
 }
